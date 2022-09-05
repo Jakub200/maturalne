@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main()
+{
+  double balance = 0, amount = 0, liczba = 0, liczba3 = 0, liczba2 = 0;
+  int choice = 0;
+
+  while (true)
+  {
+    // present the menu, accept the user's choice
+    printf("1) Liczba zmiennoprzecinkowa zaokraglona do 2 miejsc\n");
+    printf("2) liczba w systemie 16 int\n");
+    printf("3) zera z przodu (8 cyfr)\n");
+    printf("4) Wyjscie\n");
+    printf("Wybierz opcje: ");
+    scanf ("%d", &choice);
+    
+    // decide what action to carry out based on the user's choice
+    switch (choice)
+    {
+      case 1:
+        printf("Podaj liczbe: ");
+        scanf("%lf", &liczba);
+		printf( "wynik: %4.2f  \n", liczba );
+        break;
+
+      case 2:
+        printf("Podaj liczbe: ");
+        scanf("%lf", &liczba2);
+		printf( "wynik: %xf  \n", liczba2 );
+        break;
+      
+      case 3:
+       printf("Podaj liczbe: ");
+        scanf("%ld", &liczba3);
+		printf( "wynik: %08d  \n", liczba3 );
+        break;
+ 
+      // wyjscie 
+      case 4:
+        exit(0);
+    }
+    
+  }
+  
+  return 0;
+}
